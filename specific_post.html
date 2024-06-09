@@ -3,53 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Create a New Post</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <a href="index.html">
             <img src="images/york.img" alt="York University Logo" width="150" height="50">
         </a>
-        <h1>View Post</h1>
+        <h1>Create a New Post</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="forum_list.html">Forums</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section>
-            <h3>Choosen Forum: Example Forum</h3>
-        </section>
-        <section>
-            <fieldset>
-                <legend>Sort post by:</legend>
-                <label for="date">Date:</label>
-                <select name="date" id="date">
-                    <option value="Today">Today</option>
-                    <option value="Past Week">Past Week</option>
-                    <option value="Past Month">Month</option>
-                    <option value="Past Year">Year</option>
-                    <option value="All-time">All-time</option>
-                </select>
-                <label for="Stats">Stats</label>
-                <select name="date" id="date">
-                    <option value="Most Liked">Most Liked</option>
-                    <option value="Most Viewed">Most Viewed</option>
-                    <option value="Hottest">Hottest</option>
-                    <option value="Most Comments">Most Comments</option>
-                    <option value="Rising">Rising</option>
-                </select>
-            </fieldset>
-        </section>
-        <section>
-            <fieldset>
-                <legend>Results:</legend>
-                <h1>Sorry, no post right now....</h1>
-            </fieldset>
+            <form action="submit_post.html" method="post">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="title">Post Title:</label>
+                <input type="text" id="title" name="title" required>
+                
+                <label for="content">Content:</label>
+                <textarea id="content" name="content" rows="10" required></textarea>
+                
+                <input type="submit" value="Submit Post">
+            </form>
         </section>
     </main>
     <footer>

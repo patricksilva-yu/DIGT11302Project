@@ -3,9 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>York University Forums</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <header>
+        <a href="index.html">
+            <img src="images/york.img" alt="York University Logo" width="150" height="50">
+        </a>
+        <h1>York University Forums</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h3>Create New Account</h3>
+        <form action="create_account.html" method="POST">
+            <p>
+                <label for="name">Full name:</label>
+                <input type="text" name="name" id="name">
+            </p>
+            <p>
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username">
+            </p>
+            <p>
+                <label for="major">Degree Major:</label>
+                <input type="text" name="major" id="major">
+            </p>
+            <p>
+                <label for="graduation">Expected Graduation Date:</label>
+                <input type="date" name="graduation" id="graduation">
+            </p>
+            <p>
+                <input type="submit" value="Create Account">
+            </p>
+        </form>
+    </main>
 </body>
 </html>
