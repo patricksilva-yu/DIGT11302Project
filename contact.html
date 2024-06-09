@@ -6,6 +6,37 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <header>
+        <a href="index.html">
+            <img src="images/york.img" alt="York University Logo" width="150" height="50">
+        </a>
+        <h1>Contact Us</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="forum_list.html">Forums</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <form action="contact_submit.html" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required> <br>
+                
+                <label for="email">Email Adress:</label>
+                <input type="text" id="email" name="email" required><br>
+                
+                <label for="content">Message:</label><br>
+                <textarea id="content" name="content" rows="10"></textarea><br><br>
+                
+                <input type="submit" value="Submit Post">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 York University Forums. All rights reserved.</p>
+    </footer>
 </body>
 </html>
