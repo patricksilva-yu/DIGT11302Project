@@ -1,0 +1,72 @@
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.sub-header {
+    background-color: #e31837; 
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+.sub-header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.forums {
+    padding: 20px;
+}
+
+.forums h2 {
+    margin-bottom: 15px;
+}
+
+.forum-list {
+    list-style-type: none;
+}
+
+.forum-list li {
+    margin-bottom: 15px;
+}
+
+.forum-list a {
+    font-weight: bold;
+    color: #e31837;
+    text-decoration: none;
+}
+
+.forum-list p {
+    margin-top: 5px;
+    color: #666;
+}
