@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>York University Forums</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>York University Forums - My Account</title>
+    <link rel="stylesheet" href="css/patrick.css">
 </head>
 <body>
     <header>
-        <a href="index.html">
-            <img src="images/york.img" alt="York University Logo" width="150" height="50">
-        </a>
-        <h1>York University Forums</h1>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/york.img" alt="York University Logo">
+            </a>
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home Page</a></li>
@@ -23,8 +24,13 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <h3>My Account</h3>
+
+    <div class="sub-header">
+        <h1>York University Forums</h1>
+    </div>
+
+    <main class="forums">
+        <h2>My Account</h2>
         <fieldset>
             <legend>About me:</legend>
             <ul>
@@ -44,7 +50,7 @@
             <table>
                 <tr>
                     <th><img src="images/thumbs-up.png" alt="Thumbs Up" width="100"></th>
-                    <th><img src="images/thumbs-down.png" alt="Thumbs Up" width="100"></th>
+                    <th><img src="images/thumbs-down.png" alt="Thumbs Down" width="100"></th>
                 </tr>
                 <tr>
                     <td>Positive Votes</td>
@@ -57,6 +63,7 @@
             </table>
         </fieldset>
     </main>
+
     <footer>
         <p>&copy; 2024 York University Forums. All rights reserved.</p>
         <p>YorkU Logo Image Source: York University</p>
