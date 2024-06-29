@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>York University Forums</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/patrick.css">
 </head>
 <body>
     <header>
-        <a href="index.html">
-            <img src="images/york.img" alt="York University Logo" width="150" height="50">
-        </a>
-        <h1>York University Forums</h1>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/york.img" alt="York University Logo">
+            </a>
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home Page</a></li>
@@ -23,8 +24,11 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <h3>Create New Account</h3>
+    <div class="sub-header">
+        <h1>York University Forums</h1>
+    </div>
+    <main class="forums">
+        <h2>Create New Account</h2>
         <form action="create_account.html" method="POST">
             <p>
                 <label for="name">Full name:</label>
