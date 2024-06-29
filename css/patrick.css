@@ -1,8 +1,16 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 1rem 2rem;
     background-color: #fff;
     border-bottom: 1px solid #e0e0e0;
 }
@@ -13,50 +21,61 @@ header {
 }
 
 .logo img {
-    height: 40px;
-    margin-right: 20px;
+    height: 2.5rem;
+    margin-right: 1.25rem;
 }
 
+/* Navigation styling */
 nav ul {
     display: flex;
     list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
-    margin-right: 20px;
+    margin-right: 1.25rem;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #333;
+    transition: color 0.3s ease;
 }
 
+nav ul li a:hover {
+    color: #e31837;
+}
+
+/* Sub-header styling */
 .sub-header {
-    background-color: #e31837; 
+    background-color: #e31837;
     color: white;
-    padding: 15px 20px;
+    padding: 1rem 2rem;
     text-align: center;
 }
 
 .sub-header h1 {
-    font-size: 24px;
+    font-size: 1.5rem;
     margin: 0;
 }
 
+/* Main content styling */
 .forums {
-    padding: 20px;
+    padding: 1.25rem;
 }
 
 .forums h2 {
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
 }
 
 .forum-list {
     list-style-type: none;
+    padding: 0;
 }
 
 .forum-list li {
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
 }
 
 .forum-list a {
@@ -66,6 +85,18 @@ nav ul li a {
 }
 
 .forum-list p {
-    margin-top: 5px;
+    margin-top: 0.3125rem;
     color: #666;
+}
+
+footer {
+    text-align: center;
+    padding: 0.625rem 1.25rem;
+    background-color: #333;
+    color: white;
+}
+
+footer p {
+    margin: 0.3125rem 0;
+    font-size: 0.9rem;
 }
