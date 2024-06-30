@@ -13,6 +13,7 @@ header {
     padding: 1rem 2rem;
     background-color: #fff;
     border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -40,11 +41,12 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #333;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
 nav ul li a:hover {
     color: #e31837;
+    border-bottom: 2px solid #e31837;
 }
 
 /* Sub-header styling */
@@ -63,6 +65,8 @@ nav ul li a:hover {
 /* Main content styling */
 .forums {
     padding: 1.25rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .forums h2 {
@@ -76,12 +80,22 @@ nav ul li a:hover {
 
 .forum-list li {
     margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+}
+
+.forum-list li:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .forum-list a {
     font-weight: bold;
     color: #e31837;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .forum-list p {
