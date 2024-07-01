@@ -1,19 +1,30 @@
+:root {
+    --grey-color: #333;
+    --red-color: #e31837;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    color: #333;
+    color: var(--grey-color);
+}
+
+p {
+    font-size: 13pt;
+    line-height: 1.6;
+    color: #666;
 }
 
 header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
+    padding: 12px 24px;
     background-color: #fff;
     border-bottom: 1px solid #e0e0e0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
 }
 
 .logo {
@@ -22,55 +33,57 @@ header {
 }
 
 .logo img {
-    height: 2.5rem;
-    margin-right: 1.25rem;
+    height: 40px;
+    margin-right: 16px;
 }
 
-/* Navigation styling */
 nav ul {
     display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
 nav ul li {
-    margin-right: 1.25rem;
+    margin: 10px;
+    padding: 2px;
+    text-decoration: underline var(--red-color) 3px;
 }
 
-nav ul li a {
+a {
     text-decoration: none;
-    color: #333;
+    color: var(--grey-color);
     transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: #e31837;
-    border-bottom: 2px solid #e31837;
+a:hover {
+    color: var(--red-color);
+    border-bottom: 2px solid var(--red-color);
 }
 
-/* Sub-header styling */
 .sub-header {
-    background-color: #e31837;
+    background-color: var(--red-color);
     color: white;
-    padding: 1rem 2rem;
+    padding: 18px;
     text-align: center;
 }
 
 .sub-header h1 {
-    font-size: 1.5rem;
+    font-size: 16pt;
     margin: 0;
 }
 
-/* Main content styling */
 .forums {
-    padding: 1.25rem;
+    padding: 14pt;
     max-width: 1200px;
     margin: 0 auto;
+    flex-direction: column;
 }
 
 .forums h2 {
-    margin-bottom: 1rem;
+    margin-bottom: 12px;
 }
 
 .forum-list {
@@ -79,8 +92,8 @@ nav ul li a:hover {
 }
 
 .forum-list li {
-    margin-bottom: 1rem;
-    padding: 1rem;
+    margin-bottom: 16px;
+    padding: 16px;
     background-color: #fff;
     border: 1px solid #e0e0e0;
     border-radius: 5px;
@@ -93,24 +106,47 @@ nav ul li a:hover {
 
 .forum-list a {
     font-weight: bold;
-    color: #e31837;
+    color: var(--red-color);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .forum-list p {
-    margin-top: 0.3125rem;
+    margin-top: 5px;
     color: #666;
 }
 
 footer {
     text-align: center;
-    padding: 0.625rem 1.25rem;
-    background-color: #333;
-    color: white;
+    padding: 14px;
+    background-color: var(--grey-color);
 }
 
 footer p {
-    margin: 0.3125rem 0;
-    font-size: 0.9rem;
+    margin: 10px;
+    font-size: 12pt;
+    color: white;
 }
+
+#grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 10px;
+    justify-content: stretch;
+    align-content: space-evenly;
+}
+
+@media all and (min-width: 600px) {
+    #grid-container{    
+        grid-template-columns: 50% 50%;
+    }
+
+    header {
+        flex-direction: row;
+    }
+
+    nav ul li {
+        text-decoration: none;
+    }
+}
+
