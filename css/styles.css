@@ -86,12 +86,12 @@ a:hover {
     margin-bottom: 12px;
 }
 
-.forum-list {
+.grid-list {
     list-style-type: none;
     padding: 0;
 }
 
-.forum-list li {
+.grid-list li {
     margin-bottom: 16px;
     padding: 16px;
     background-color: #fff;
@@ -100,18 +100,18 @@ a:hover {
     transition: box-shadow 0.3s ease;
 }
 
-.forum-list li:hover {
+.grid-list li:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.forum-list a {
+.grid-list a {
     font-weight: bold;
     color: var(--red-color);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.forum-list p {
+.grid-list p {
     margin-top: 5px;
     color: #666;
 }
