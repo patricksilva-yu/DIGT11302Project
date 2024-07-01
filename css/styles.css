@@ -21,7 +21,7 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 12px 24px;
-    background-color: #fff;
+    background-color: white;
     border-bottom: 1px solid #e0e0e0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     flex-direction: column;
@@ -94,7 +94,7 @@ a:hover {
 .grid-list li {
     margin-bottom: 16px;
     padding: 16px;
-    background-color: #fff;
+    background-color: white;
     border: 1px solid #e0e0e0;
     border-radius: 5px;
     transition: box-shadow 0.3s ease;
@@ -126,6 +126,20 @@ footer p {
     margin: 10px;
     font-size: 12pt;
     color: white;
+}
+
+fieldset {
+    border: 1px solid #e0e0e0;
+    margin-bottom: 25px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+    font-weight: bold;
+}
+
+fieldset legend {
+    color: var(--red-color);
+    font-weight: bold;
 }
 
 #grid-container {
