@@ -1,152 +1,131 @@
 :root {
     --grey-color: #333;
     --red-color: #e31837;
+    --light-grey: #f4f4f4;
 }
 
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f4f4f4;;
     color: var(--grey-color);
 }
 
-p {
-    font-size: 13pt;
-    line-height: 1.6;
-    color: #666;
-}
-
 header {
-    display: flex;
-    justify-content: space-between;
-    padding: 12px 24px;
-    background-color: #fff;
+    background-color: white;
+    padding: 10px 20px;
     border-bottom: 1px solid #e0e0e0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    flex-direction: column;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
 }
 
 .logo img {
-    height: 40px;
-    margin-right: 16px;
+    height: 30px;
 }
 
 nav ul {
     display: flex;
-    gap: 6px;
-    flex-wrap: wrap;
+    gap: 20px;
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-nav ul li {
-    margin: 10px;
-    padding: 2px;
-    text-decoration: underline var(--red-color) 3px;
-}
-
-a {
-    text-decoration: none;
+nav ul li a {
     color: var(--grey-color);
-    transition: color 0.3s ease, border-bottom 0.3s ease;
-}
-
-a:hover {
-    color: var(--red-color);
-    border-bottom: 2px solid var(--red-color);
+    text-decoration: none;
 }
 
 .sub-header {
     background-color: var(--red-color);
     color: white;
-    padding: 18px;
+    padding: 15px 20px;
     text-align: center;
 }
 
 .sub-header h1 {
-    font-size: 16pt;
+    font-size: 20px;
     margin: 0;
 }
 
 .forums {
-    padding: 14pt;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-direction: column;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .forums h2 {
-    margin-bottom: 12px;
+    color: var(--red-color);
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--red-color);
+    padding-bottom: 10px;
 }
 
-.forum-list {
-    list-style-type: none;
-    padding: 0;
-}
-
-.forum-list li {
-    margin-bottom: 16px;
-    padding: 16px;
-    background-color: #fff;
+fieldset {
     border: 1px solid #e0e0e0;
+    margin-bottom: 25px;
+    padding: 20px;
     border-radius: 5px;
-    transition: box-shadow 0.3s ease;
 }
 
-.forum-list li:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.forum-list a {
+legend {
     font-weight: bold;
     color: var(--red-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
+    padding: 0 10px;
 }
 
-.forum-list p {
-    margin-top: 5px;
-    color: #666;
+ul {
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+th, td {
+    text-align: center;
+    padding: 10px;
+}
+
+th img {
+    width: 50px;
+    height: auto;
 }
 
 footer {
-    text-align: center;
-    padding: 14px;
     background-color: var(--grey-color);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
 }
 
 footer p {
-    margin: 10px;
-    font-size: 12pt;
-    color: white;
+    margin: 5px 0;
 }
 
-#grid-container {
-    display: grid;
-    grid-template-columns: auto;
-    gap: 10px;
-    justify-content: stretch;
-    align-content: space-evenly;
-}
-
-@media all and (min-width: 600px) {
-    #grid-container{    
-        grid-template-columns: 50% 50%;
-    }
-
+@media (max-width: 768px) {
     header {
-        flex-direction: row;
+        flex-direction: column;
     }
 
-    nav ul li {
-        text-decoration: none;
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .forums {
+        padding: 20px;
+        margin: 20px 10px;
     }
 }
-
