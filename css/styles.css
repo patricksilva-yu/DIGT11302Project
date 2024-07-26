@@ -180,6 +180,30 @@ border-color: red;
     background-color: #aaa;
 }
 
+#special {
+    margin: auto;
+    text-align: center;
+    color: #fff;
+    background-color: #80ff80;
+    padding: 2px; 
+    border: 1px solid #ccc;
+    border-radius: 10px; 
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    position: relative; 
+    top: 50%; 
+    transform: translateY(-50%);
+    opacity: 0;
+} 
+
+.post {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
 .grid-list {
     list-style-type: none;
     padding: 0;

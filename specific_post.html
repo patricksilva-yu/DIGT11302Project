@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>York University Forums - View Post</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script src = "script.js"></script>
 </head>
 <body>
     <header>
@@ -46,6 +45,9 @@
             </button>
             <div id="formContainer"></div>
         </div>
+        <div id="special">
+            <h1>Post Submitted!</h1>
+        </div>
         </section>
         <div>
             <fieldset>
@@ -71,7 +73,9 @@
         <div>
             <fieldset>
                 <legend>Results:</legend>
-                <h2>Sorry, no posts right now....</h2>
+                <div id="resultsContainer">
+                    <h2 id="no-post">Sorry, no posts right now....</h2>
+                </div>
             </fieldset>
         </div>
     </main>
@@ -81,87 +85,5 @@
         <p>YorkU Logo Image Source: York University</p>
     </footer>
 </body>
-
-<script>
-    const createPost = document.getElementById('create-post');
-    createPost.addEventListener('click', function() {
-       const formContainer = document.getElementById('formContainer');
-
-       formContainer.style.display = 'block';
-       createPost.style.display = "none";
-
-       formContainer.innerHTML = '';
-
-       const form = document.createElement('form');
-       form.action = 'submit_post.html';
-       form.method = 'post';
-
-       const usernameLabel = document.createElement('label');
-       usernameLabel.htmlFor = 'username';
-       usernameLabel.textContent = 'Username:';
-       form.appendChild(usernameLabel);
-
-       const usernameInput = document.createElement('input');
-       usernameInput.type = 'text';
-       usernameInput.id = 'username';
-       usernameInput.name = 'username';
-       usernameInput.required = true;
-       form.appendChild(usernameInput);
-
-       form.appendChild(document.createElement('br'));
-
-       const titleLabel = document.createElement('label');
-       titleLabel.htmlFor = 'title';
-       titleLabel.textContent = 'Post Title:';
-       form.appendChild(titleLabel);
-
-       const titleInput = document.createElement('input');
-       titleInput.type = 'text';
-       titleInput.id = 'title';
-       titleInput.name = 'title';
-       titleInput.required = true;
-       form.appendChild(titleInput);
-
-       form.appendChild(document.createElement('br'));
-
-       const contentLabel = document.createElement('label');
-       contentLabel.htmlFor = 'content';
-       contentLabel.textContent = 'Content:';
-       form.appendChild(contentLabel);
-
-       const contentTextarea = document.createElement('textarea');
-       contentTextarea.id = 'content';
-       contentTextarea.name = 'content';
-       contentTextarea.rows = 10;
-       contentTextarea.required = true;
-       form.appendChild(contentTextarea);
-
-       form.appendChild(document.createElement('br'));
-
-        const buttonContainer = document.createElement('div');
-        buttonContainer.className = 'button-container';
-
-        const submitButton = document.createElement('input');
-        submitButton.type = 'submit';
-        submitButton.value = 'Submit Post';
-        buttonContainer.appendChild(submitButton);
-
-        const cancelButton = document.createElement('button');
-        cancelButton.type = 'button';
-        cancelButton.id = 'cancel-button';
-        cancelButton.textContent = 'Cancel';
-        cancelButton.addEventListener('click', function() {
-            formContainer.innerHTML = '';
-            formContainer.style.display = 'none';
-            createPost.style.display = "block"
-        });
-        buttonContainer.appendChild(cancelButton);
-
-        form.appendChild(buttonContainer);
-
-        formContainer.appendChild(form);
-
-       formContainer.appendChild(form);
-   });
-</script>
+<script src = "js/script-post.js"></script>
 </html>
