@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('form');
 
     form.addEventListener('submit', function(event) {
@@ -7,39 +7,28 @@ document.addEventListener('DOMContentLoaded', () => {
         const errorMessages = form.querySelectorAll('.error-message');
         errorMessages.forEach(error => error.remove());
 
-        const name = document.getElementById('name');
-        if (name.value.trim() === '') {
-            isValid = false;
-            showError(name, 'Full name is required.');
-        }
-
         const username = document.getElementById('username');
         if (username.value.trim() === '') {
             isValid = false;
             showError(username, 'Username is required.');
         }
 
-        const password = document.getElementById('password');
-        const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
-        if (!passwordPattern.test(password.value)) {
+        const title = document.getElementById('title');
+        if (title.value.trim() === '') {
             isValid = false;
-            showError(password, 'Password must be at least 8 characters long and include at least one letter and one number.');
+            showError(title, 'Post title is required.');
         }
 
-        const major = document.getElementById('major');
-        if (major.value.trim() === '') {
+        const content = document.getElementById('content');
+        if (content.value.trim() === '') {
             isValid = false;
-            showError(major, 'Degree major is required.');
-        }
-
-        const graduation = document.getElementById('graduation');
-        if (graduation.value === '') {
-            isValid = false;
-            showError(graduation, 'Expected graduation date is required.');
+            showError(content, 'Content is required.');
         }
 
         if (!isValid) {
             event.preventDefault();
+        } else {
+            showNotification();
         }
     });
 
@@ -56,10 +45,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         element.style.borderColor = 'red'; 
     }
-    
+
     function showNotification() {
         const notification = document.createElement('div');
-        notification.textContent = 'Account creation form loaded!';
+        notification.textContent = 'Post submitted successfully!';
         notification.style.position = 'fixed';
         notification.style.bottom = '10px';
         notification.style.right = '10px';
@@ -73,5 +62,34 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 2000);
     }
 
-    showNotification();
+    document.querySelectorAll('a').forEach(anchor => {
+        anchor.addEventListener('click', function(event) {
+            console.log('Link clicked:', event.target);
+        });
+    });
+
+    document.addEventListener('mouseover', function(event) {
+        if (event.target.tagName === 'A') {
+            event.target.style.color = 'blue';
+            console.log('Mouseover on:', event.target);
+        }
+    });
+
+    document.addEventListener('mouseout', function(event) {
+        if (event.target.tagName === 'A') {
+            event.target.style.color = '';
+            console.log('Mouseout from:', event.target);
+        }
+    });
+
+    document.addEventListener('keypress', function(event) {
+        console.log('Key pressed:', event.key);
+    });
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            console.log('Enter key pressed and default prevented');
+        }
+    });
 });
