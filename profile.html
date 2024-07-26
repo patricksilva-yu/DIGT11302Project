@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>York University Forums - My Account</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script src = "script.js"></script>
+    <script src = "js/profile.js"></script>
 </head>
 <body>
     <header>
@@ -35,20 +35,36 @@
         <h2>My Account</h2>
         <div id="grid-container">
             <fieldset>
+                <legend>Login:</legend>
+                <form action="profile.html" method="post">
+                    <p>
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" required>
+                    </p>
+                    <p>
+                        <label for="password">Password:</label>
+                        <input type="text" id="password" name="password" required>
+                    </p>
+                    <p>
+                        <input id="submit" type="submit" value="Submit">
+                    </p>
+                </form>   
+            </fieldset>
+            <fieldset hidden="true">
                 <legend>About me:</legend>
                 <ul>
-                    <li>Name: John Smith</li>
+                    <li id="name">Name: John Smith</li>
                     <li>Major: Digital Technologies</li>
                     <li>Graduation Date: August 2027</li>
                 </ul>
             </fieldset>
-            <fieldset>
+            <fieldset hidden="true">
                 <legend>My posts:</legend>
                 <ul>
                     <li>No Posts Currently!</li>
                 </ul>
             </fieldset>
-            <fieldset>
+            <fieldset hidden="true">
                 <legend>My Votes:</legend>
                 <table>
                     <tr>
