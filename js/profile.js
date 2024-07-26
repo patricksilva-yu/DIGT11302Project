@@ -3,7 +3,26 @@ window.addEventListener("DOMContentLoaded", DOMLoaded);
 function DOMLoaded() {
     const submitButton = document.getElementById("submit");
     submitButton.addEventListener("click", login);
+
+    function showNotification() {
+        const notification = document.createElement('div');
+        notification.textContent = 'Profile loaded!';
+        notification.style.position = 'fixed';
+        notification.style.bottom = '10px';
+        notification.style.right = '10px';
+        notification.style.backgroundColor = 'green';
+        notification.style.color = 'white';
+        notification.style.padding = '10px';
+        document.body.appendChild(notification);
+
+        setTimeout(() => {
+            notification.remove();
+        }, 2000);
+    }
+
+    showNotification();
 }
+
 
 function login(event) {
     event.preventDefault();

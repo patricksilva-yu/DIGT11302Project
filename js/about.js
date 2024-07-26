@@ -33,4 +33,21 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Enter key pressed and default prevented');
         }
     });
+    function showNotification() {
+        const notification = document.createElement('div');
+        notification.textContent = 'Welcome to the About page!';
+        notification.style.position = 'fixed';
+        notification.style.bottom = '10px';
+        notification.style.right = '10px';
+        notification.style.backgroundColor = 'green';
+        notification.style.color = 'white';
+        notification.style.padding = '10px';
+        document.body.appendChild(notification);
+
+        setTimeout(() => {
+            notification.remove();
+        }, 2000);
+    }
+
+    showNotification();
 });
