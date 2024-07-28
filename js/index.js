@@ -1,3 +1,4 @@
+// this DOM manipulation creates HTML content for the forum list page using JavaScript
 document.addEventListener('DOMContentLoaded', function() {
     const mainTitle = document.querySelector('h1');
     const gridContainer = document.getElementById('grid-container');
@@ -7,10 +8,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const newListItem = document.createElement('li');
     const newLink = document.createElement('a');
     newLink.href = 'specific_post.html';
-    newLink.innerHTML = '<h3>Post a Forum</h3><p>Let us know your thoughts on York!</p>';
+    newLink.innerHTML = '<h3>Post a Forum</h3><p>Home page loaded!</p>';
     newListItem.appendChild(newLink);
     gridContainer.appendChild(newListItem);
 
+     //event listeners for clicking, mouse actions, and key actions
+     
     document.querySelectorAll('a').forEach(anchor => {
         anchor.addEventListener('click', function(event) {
             console.log('Link clicked:', event.target);
