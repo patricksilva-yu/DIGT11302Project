@@ -12,11 +12,17 @@ document.addEventListener('DOMContentLoaded', () => {
             isValid = false;
             showError(name, 'Full name is required.');
         }
+        else {
+            name.style.borderColor = '';
+        }
 
         const username = document.getElementById('username');
         if (username.value.trim() === '') {
             isValid = false;
             showError(username, 'Username is required.');
+        }
+        else {
+            username.style.borderColor = '';
         }
 
         const password = document.getElementById('password');
@@ -25,17 +31,26 @@ document.addEventListener('DOMContentLoaded', () => {
             isValid = false;
             showError(password, 'Password must be at least 8 characters long and include at least one letter and one number.');
         }
+        else {
+            password.style.borderColor = '';
+        }
 
         const major = document.getElementById('major');
         if (major.value.trim() === '') {
             isValid = false;
             showError(major, 'Degree major is required.');
         }
+        else {
+            major.style.borderColor = '';
+        }
 
         const graduation = document.getElementById('graduation');
         if (graduation.value === '') {
             isValid = false;
             showError(graduation, 'Expected graduation date is required.');
+        }        
+        else {
+            graduation.style.borderColor = '';
         }
 
         if (!isValid) {
@@ -72,6 +87,10 @@ document.addEventListener('DOMContentLoaded', () => {
         notification.style.color = 'white';
         notification.style.padding = '10px';
         document.body.appendChild(notification);
+
+        setTimeout(() => {
+            notification.remove();
+        }, 2000);
     }
 
     showNotification();
