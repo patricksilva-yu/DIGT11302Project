@@ -48,13 +48,18 @@ document.addEventListener('DOMContentLoaded', () => {
         error.className = 'error-message';
         error.textContent = message;
 
+        // Add styling to the error message
+        error.style.color = 'red';
+        error.style.fontSize = '12px';
+        error.style.marginTop = '5px';
+
         if (element.nextSibling) {
             element.parentNode.insertBefore(error, element.nextSibling);
         } else {
             element.parentNode.appendChild(error);
         }
 
-        element.style.borderColor = 'red'; 
+        element.style.borderColor = 'red';
     }
     
     function showNotification() {
@@ -67,10 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
         notification.style.color = 'white';
         notification.style.padding = '10px';
         document.body.appendChild(notification);
-
-        setTimeout(() => {
-            notification.remove();
-        }, 2000);
     }
 
     showNotification();
