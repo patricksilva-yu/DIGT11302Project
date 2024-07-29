@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const newListItem = document.createElement('li');
     const newLink = document.createElement('a');
     newLink.href = 'specific_post.html';
-    newLink.innerHTML = '<h3>Post a Forum</h3><p>Home page loaded!</p>';
+    newLink.innerHTML = '<h3>Post a Forum</h3><p>Let us hear your opinion!</p>';
     newListItem.appendChild(newLink);
     gridContainer.appendChild(newListItem);
 
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     function showNotification() {
         const notification = document.createElement('div');
-        notification.textContent = 'New forum item added!';
+        notification.textContent = 'Home Page Loaded!';
         notification.style.position = 'fixed';
         notification.style.bottom = '10px';
         notification.style.right = '10px';
